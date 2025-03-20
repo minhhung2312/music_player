@@ -1,0 +1,20 @@
+{{!-- Kế thừa từ layout chính --}}
+{{!-- {{> header}} --}}
+
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    <img src="/img/{{user.avatar}}" alt="">
+    <p>Welcome, {{user.username}}!</p>
+
+    <ul>
+        <li><a href="/admin/users">Manage Users</a></li>
+        <li><a href="/admin/songs">Manage Songs</a></li>
+        <li><a href="/admin/reports">View Reports</a></li>
+    </ul>
+
+    <form action="/auth/logout" method="post">
+        <button type="submit">logout</button>
+    </form>
+</div>
+
+{{!-- {{> footer}} --}}

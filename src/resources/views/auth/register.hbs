@@ -1,0 +1,26 @@
+<h2>Register</h2>
+
+<form action="/auth/register" method="POST">
+    <div>
+        <input type="text" name="username" placeholder="Username" value="{{username}}" />
+        {{#if errors.username}}
+            <p style="color: red">{{errors.username}}</p>
+        {{/if}}
+    </div>
+
+    <div>
+        <input type="text" name="email" placeholder="Email" value="{{email}}" />
+        {{#if errors.email}}
+            <p style="color: red">{{errors.email}}</p>
+        {{/if}}
+    </div>
+
+    <div>
+        <input type="password" name="password" placeholder="Password" />
+        {{#if errors.password}}
+            <p style="color: red">{{errors.password}}</p>
+        {{/if}}
+    </div>
+
+    <button type="submit">Register</button>
+</form>

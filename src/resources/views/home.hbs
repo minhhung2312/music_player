@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Welcome to Music Player</h1>
+
+    {{#if user}}
+        <div class="user-info">
+            <img src="/img/{{user.avatar}}" alt="Avatar" class="avatar">
+            <span>{{user.username}}</span>
+            <form action="/auth/logout" method="POST">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    {{else}}
+        <div class="auth-buttons">
+            <a href="/auth/login">Login</a>
+            <a href="/auth/register">Register</a>
+        </div>
+    {{/if}}
+</div>

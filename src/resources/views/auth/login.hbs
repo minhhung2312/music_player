@@ -1,0 +1,23 @@
+<h2>Login</h2>
+
+<form action="/auth/login" method="POST">
+    <div>
+        <input type="text" name="email" placeholder="Email" value="{{email}}" />
+        {{#if errors.email}}
+            <p style="color: red">{{errors.email}}</p>
+        {{/if}}
+    </div>
+
+    <div>
+        <input type="password" name="password" placeholder="Password"/>
+        {{#if errors.password}}
+            <p style="color: red">{{errors.password}}</p>
+        {{/if}}
+    </div>
+
+    {{#if errors.general}}
+        <p style="color: red">{{errors.general}}</p>
+    {{/if}}
+
+    <button type="submit">Login</button>
+</form>
